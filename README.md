@@ -105,8 +105,8 @@ Redis >= 6.0
 
 ### 1. 프로젝트 클론
 ```bash
-git clone https://github.com/yourusername/ai-fashion-mall.git
-cd ai-fashion-mall
+git clone https://github.com/nambak/vesto.git
+cd vesto
 ```
 
 ### 2. 의존성 설치
@@ -130,7 +130,7 @@ php artisan key:generate
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=ai_fashion_mall
+DB_DATABASE=vesto
 DB_USERNAME=your_username
 DB_PASSWORD=your_password
 ```
@@ -160,7 +160,7 @@ php artisan serve
 ## 🗂️ 프로젝트 구조
 
 ```
-ai-fashion-mall/
+vesto/
 ├── app/
 │   ├── Filament/           # Filament 관리자 패널
 │   ├── Http/
@@ -297,9 +297,9 @@ docker-compose exec app php artisan migrate
 
 ## 📞 지원 및 문의
 
-- **이슈 리포트**: [GitHub Issues](https://github.com/yourusername/ai-fashion-mall/issues)
-- **이메일**: contact@aifashionmall.com
-- **문서**: [Documentation Wiki](https://github.com/yourusername/ai-fashion-mall/wiki)
+- **이슈 리포트**: [GitHub Issues](https://github.com/nambak/vesto/issues)
+- **이메일**: nambak8@gmail.com
+- **문서**: [Documentation Wiki](https://github.com/nambak/vesto/wiki)
 
 ## 🎯 로드맵
 
