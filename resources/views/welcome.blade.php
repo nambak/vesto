@@ -288,9 +288,9 @@
 <!-- Featured Collections Grid (Bottom Section) -->
 <section class="py-0 mb-16 bg-white">
     <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-3 grid-rows-2 gap-0 h-[800px]">
+        <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-0 h-auto md:h-[800px]">
             <!-- Collection 1 - Ethereal Elegance (세로 2행 병합) -->
-            <div class="relative bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 row-span-2 group overflow-hidden">
+            <div class="relative bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 h-96 md:row-span-2 group overflow-hidden">
                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all duration-300"></div>
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-9xl opacity-20 text-white">👨</span>
@@ -305,7 +305,7 @@
             </div>
 
             <!-- Collection 2 - Enchanting Styles (가로 2열 병합) -->
-            <div class="relative bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 col-span-2 group overflow-hidden">
+            <div class="relative bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 h-96 md:col-span-2 group overflow-hidden">
                 <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-all duration-300"></div>
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-9xl opacity-20 text-white">👩</span>
@@ -320,7 +320,7 @@
             </div>
 
             <!-- Collection 3 - Chic Footwear -->
-            <div class="relative bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 group overflow-hidden">
+            <div class="relative bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 h-96 group overflow-hidden">
                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all duration-300"></div>
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-9xl opacity-20 text-white">👟</span>
@@ -335,7 +335,7 @@
             </div>
 
             <!-- Collection 4 - Trendsetting Bags -->
-            <div class="relative bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 group overflow-hidden">
+            <div class="relative bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 h-96 group overflow-hidden">
                 <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-all duration-300"></div>
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-9xl opacity-20 text-white">👜</span>
