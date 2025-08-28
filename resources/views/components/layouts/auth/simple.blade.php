@@ -1,54 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $title ?? 'Vesto - Login' }}</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            900: '#0c4a6e'
-                        }
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.8s ease-out',
-                        'slide-up': 'slideUp 0.6s ease-out',
-                        'zoom-in': 'zoomIn 0.5s ease-out'
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': {opacity: '0'},
-                            '100%': {opacity: '1'}
-                        },
-                        slideUp: {
-                            '0%': {opacity: '0', transform: 'translateY(30px)'},
-                            '100%': {opacity: '1', transform: 'translateY(0)'}
-                        },
-                        zoomIn: {
-                            '0%': {opacity: '0', transform: 'scale(0.95)'},
-                            '100%': {opacity: '1', transform: 'scale(1)'}
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    @include('partials.head', ['title' => $title ?? 'Vesto - Login'])
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
         .hero-gradient {
             background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%);
         }

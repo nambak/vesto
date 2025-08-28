@@ -6,12 +6,6 @@
     <title>Vesto - Modern Fashion Store</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
-
-        body {
-            font-family: 'Nanum Gothic', sans-serif;
-        }
-
         .hero-gradient {
             background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%);
         }
