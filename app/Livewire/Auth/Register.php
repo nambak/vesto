@@ -21,6 +21,12 @@ class Register extends Component
 
     public string $password_confirmation = '';
 
+    public function render()
+    {
+        return view('livewire.auth.register')
+            ->title('Vesto - Register');
+    }
+
     /**
      * Handle an incoming registration request.
      */
