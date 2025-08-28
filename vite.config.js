@@ -8,11 +8,24 @@ export default defineConfig({
     plugins: [
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.js'],
-            refresh: true,
+            refresh: [
+                'resources/views/**/*.blade.php',
+                'resources/css/**/*.css',
+                'resources/js/**/*.js',
+                'app/**/*.php',
+            ],
         }),
         tailwindcss(),
     ],
     server: {
+        port: 5174,
+        strictPort: false,
         cors: true,
+        hmr: {
+            host: 'localhost',
+        },
+        watch: {
+            usePolling: true,
+        },
     },
 });

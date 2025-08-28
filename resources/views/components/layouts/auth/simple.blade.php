@@ -1,22 +1,134 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
-    <head>
-        @include('partials.head')
-    </head>
-    <body class="min-h-screen bg-white antialiased dark:bg-linear-to-b dark:from-neutral-950 dark:to-neutral-900">
-        <div class="bg-background flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
-            <div class="flex w-full max-w-sm flex-col gap-2">
-                <a href="{{ route('home') }}" class="flex flex-col items-center gap-2 font-medium" wire:navigate>
-                    <span class="flex h-9 w-9 mb-1 items-center justify-center rounded-md">
-                        <x-app-logo-icon class="size-9 fill-current text-black dark:text-white" />
-                    </span>
-                    <span class="sr-only">{{ config('app.name', 'Laravel') }}</span>
-                </a>
-                <div class="flex flex-col gap-6">
-                    {{ $slot }}
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ $title ?? 'Vesto - Login' }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e'
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'zoom-in': 'zoomIn 0.5s ease-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': {opacity: '0'},
+                            '100%': {opacity: '1'}
+                        },
+                        slideUp: {
+                            '0%': {opacity: '0', transform: 'translateY(30px)'},
+                            '100%': {opacity: '1', transform: 'translateY(0)'}
+                        },
+                        zoomIn: {
+                            '0%': {opacity: '0', transform: 'scale(0.95)'},
+                            '100%': {opacity: '1', transform: 'scale(1)'}
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%);
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+<!-- Header -->
+<header class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="{{ route('home') }}" class="text-2xl font-bold text-gray-900" wire:navigate>Vesto</a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors">Home</a>
+                <div class="relative group">
+                    <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center">
+                        Shop
+                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
                 </div>
+                <div class="relative group">
+                    <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center">
+                        Pages
+                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors">Blog</a>
+                <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors">Contact Us</a>
+            </nav>
+
+            <!-- Right Icons -->
+            <div class="flex items-center space-x-4">
+                <button class="p-2 text-gray-700 hover:text-gray-900 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
+                <button class="p-2 text-gray-700 hover:text-gray-900 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                </button>
+                <button class="p-2 text-gray-700 hover:text-gray-900 transition-colors relative">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-13v1a3 3 0 11-6 0v-1m6 0a3 3 0 11-6 0m6 0H9"></path>
+                    </svg>
+                    <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+                </button>
             </div>
         </div>
-        @fluxScripts
-    </body>
+    </div>
+</header>
+
+<!-- Login Section -->
+<section class="pt-20 min-h-screen hero-gradient flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="flex justify-center">
+            <div class="w-full max-w-md bg-white/90 backdrop-blur-md rounded-2xl shadow-xl p-8 animate-slide-up">
+                {{ $slot }}
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
 </html>

@@ -26,16 +26,16 @@
                     },
                     keyframes: {
                         fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' }
+                            '0%': {opacity: '0'},
+                            '100%': {opacity: '1'}
                         },
                         slideUp: {
-                            '0%': { opacity: '0', transform: 'translateY(30px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                            '0%': {opacity: '0', transform: 'translateY(30px)'},
+                            '100%': {opacity: '1', transform: 'translateY(0)'}
                         },
                         zoomIn: {
-                            '0%': { opacity: '0', transform: 'scale(0.95)' },
-                            '100%': { opacity: '1', transform: 'scale(1)' }
+                            '0%': {opacity: '0', transform: 'scale(0.95)'},
+                            '100%': {opacity: '1', transform: 'scale(1)'}
                         }
                     }
                 }
@@ -54,7 +54,7 @@
         }
 
         .text-shadow {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -75,7 +75,8 @@
                     <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center">
                         Shop
                         <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </a>
                 </div>
@@ -83,7 +84,8 @@
                     <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center">
                         Pages
                         <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </a>
                 </div>
@@ -95,17 +97,20 @@
             <div class="flex items-center space-x-4">
                 <button class="p-2 text-gray-700 hover:text-gray-900 transition-colors">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </button>
                 <button class="p-2 text-gray-700 hover:text-gray-900 transition-colors">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                     </svg>
                 </button>
                 <button class="p-2 text-gray-700 hover:text-gray-900 transition-colors relative">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-13v1a3 3 0 11-6 0v-1m6 0a3 3 0 11-6 0m6 0H9"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-13v1a3 3 0 11-6 0v-1m6 0a3 3 0 11-6 0m6 0H9"></path>
                     </svg>
                     <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
                 </button>
@@ -147,7 +152,8 @@
                 <!-- Navigation Arrows -->
                 <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 p-3 rounded-full shadow-lg hover:bg-white transition-colors">
                     <svg class="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 19l-7-7 7-7"></path>
                     </svg>
                 </button>
                 <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 p-3 rounded-full shadow-lg hover:bg-white transition-colors">
@@ -173,7 +179,8 @@
                 <button class="text-gray-500 hover:text-gray-900 font-medium pb-2 transition-colors">MEN</button>
                 <button class="text-gray-500 hover:text-gray-900 font-medium pb-2 transition-colors">BAGS</button>
                 <button class="text-gray-500 hover:text-gray-900 font-medium pb-2 transition-colors">KIDS</button>
-                <button class="text-gray-500 hover:text-gray-900 font-medium pb-2 transition-colors">ACCESSORIES</button>
+                <button class="text-gray-500 hover:text-gray-900 font-medium pb-2 transition-colors">ACCESSORIES
+                </button>
             </div>
         </div>
 
@@ -284,13 +291,12 @@
 </section>
 
 
-
 <!-- Featured Collections Grid (Bottom Section) -->
-<section class="py-0 mb-16 bg-white">
+<section class="py-0 bg-white">
     <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-0 h-auto md:h-[800px]">
             <!-- Collection 1 - Ethereal Elegance (세로 2행 병합) -->
-            <div class="relative bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 h-96 md:row-span-2 group overflow-hidden">
+            <div class="relative bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 h-96 md:h-full md:row-span-2 group overflow-hidden">
                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all duration-300"></div>
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-9xl opacity-20 text-white">👨</span>
@@ -305,7 +311,7 @@
             </div>
 
             <!-- Collection 2 - Enchanting Styles (가로 2열 병합) -->
-            <div class="relative bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 h-96 md:col-span-2 group overflow-hidden">
+            <div class="relative bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 h-96 md:col-span-2 md:h-full group overflow-hidden">
                 <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-all duration-300"></div>
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-9xl opacity-20 text-white">👩</span>
@@ -320,7 +326,7 @@
             </div>
 
             <!-- Collection 3 - Chic Footwear -->
-            <div class="relative bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 h-96 group overflow-hidden">
+            <div class="relative bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 h-96 md:h-full group overflow-hidden">
                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all duration-300"></div>
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-9xl opacity-20 text-white">👟</span>
@@ -335,7 +341,7 @@
             </div>
 
             <!-- Collection 4 - Trendsetting Bags -->
-            <div class="relative bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 h-96 group overflow-hidden">
+            <div class="relative bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 h-96 md:h-full group overflow-hidden">
                 <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-all duration-300"></div>
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-9xl opacity-20 text-white">👜</span>
@@ -379,11 +385,14 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             <div>
                 <h3 class="text-xl font-bold mb-4">Vesto</h3>
-                <p class="text-gray-400 mb-4">Elevating your style with premium fashion pieces for the modern lifestyle.</p>
+                <p class="text-gray-400 mb-4">Elevating your style with premium fashion pieces for the modern
+                    lifestyle.</p>
                 <div class="flex space-x-4">
                     <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25" />
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"/>
                         </svg>
                     </a>
                     <a href="#" class="text-gray-400 hover:text-white transition-colors">
