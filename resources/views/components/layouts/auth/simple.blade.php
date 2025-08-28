@@ -70,7 +70,7 @@
 
             <!-- Navigation -->
             <nav class="hidden lg:flex items-center space-x-8">
-                <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors">Home</a>
+                <a href="{{ route('home') }}" class="text-gray-700 hover:text-gray-900 transition-colors" wire:navigate>Home</a>
                 <div class="relative group">
                     <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center">
                         Shop
@@ -101,12 +101,21 @@
                               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </button>
-                <button class="p-2 text-gray-700 hover:text-gray-900 transition-colors">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                    </svg>
-                </button>
+                @auth
+                    <a href="{{ route('dashboard') }}" class="p-2 text-gray-700 hover:text-gray-900 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </a>
+                @else
+                    <a href="{{ route('login') }}" class="p-2 text-gray-700 hover:text-gray-900 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </a>
+                @endauth
                 <button class="p-2 text-gray-700 hover:text-gray-900 transition-colors relative">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
