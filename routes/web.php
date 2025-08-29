@@ -1,5 +1,13 @@
 <?php
 
+use App\Http\Controllers\CouponController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PointController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StyleAnalysisController;
+use App\Http\Controllers\WishlistController;
+use App\Livewire\MyPageDashboard;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -29,6 +37,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/mypage/points', [PointController::class, 'history'])->name('points.history');
     Route::get('/mypage/style-analysis', [StyleAnalysisController::class, 'index'])->name('style-analysis');
     Route::get('/mypage/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+
+    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
