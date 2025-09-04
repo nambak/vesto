@@ -22,3 +22,6 @@ yarn-error.log
 /.vscode
 /.zed
 /.claude/
+/.junie/
+/.mcp.json
+/CLAUDE.md
