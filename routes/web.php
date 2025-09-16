@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
+
 Route::view('admin', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('admin');
@@ -38,7 +41,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/mypage/style-analysis', [StyleAnalysisController::class, 'index'])->name('style-analysis');
     Route::get('/mypage/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
 
-    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 });
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';
