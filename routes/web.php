@@ -20,9 +20,6 @@ Route::get('/', function () {
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
 
-Route::view('admin', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('admin');
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
@@ -40,7 +37,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/mypage/points', [PointController::class, 'history'])->name('points.history');
     Route::get('/mypage/style-analysis', [StyleAnalysisController::class, 'index'])->name('style-analysis');
     Route::get('/mypage/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
-
 });
 
 require __DIR__.'/auth.php';
+

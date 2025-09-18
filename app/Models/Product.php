@@ -29,11 +29,11 @@ class Product extends Model
     ];
 
     protected $casts = [
-        'price' => 'decimal:2',
-        'sale_price' => 'decimal:2',
-        'is_active' => 'boolean',
-        'dimensions' => 'array',
-        'tags' => 'array',
+        'price'             => 'decimal:2',
+        'sale_price'        => 'decimal:2',
+        'is_active'         => 'boolean',
+        'dimensions'        => 'array',
+        'tags'              => 'array',
         'additional_images' => 'array',
     ];
 
@@ -65,18 +65,18 @@ class Product extends Model
 
     public function getDiscountPercentage(): ?int
     {
-        if (! $this->sale_price || $this->sale_price >= $this->price) {
+        if (!$this->sale_price || $this->sale_price >= $this->price) {
             return null;
         }
 
-        return (int) round((($this->price - $this->sale_price) / $this->price) * 100);
+        return (int)round((($this->price - $this->sale_price) / $this->price) * 100);
     }
 
     public function getEffectivePrice(): float
     {
         return $this->sale_price && $this->sale_price < $this->price
-            ? (float) $this->sale_price
-            : (float) $this->price;
+            ? (float)$this->sale_price
+            : (float)$this->price;
     }
 
     public function isOnSale(): bool

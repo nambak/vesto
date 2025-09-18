@@ -3,8 +3,6 @@
 use App\Models\Product;
 use App\Models\User;
 
-uses(\Illuminate\Foundation\Testing\RefreshDatabase::class);
-
 test('authenticated user can view product details', function () {
     $user = User::factory()->create();
     $product = Product::factory()->create([
